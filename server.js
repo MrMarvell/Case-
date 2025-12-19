@@ -8,6 +8,8 @@ const SteamStrategy = require('passport-steam').Strategy;
 const config = require('./lib/config');
 const { db, nowIso } = require('./lib/db');
 require('./scripts/init-db'); // ensure schema
+require('./scripts/auto-seed')();
+
 
 // DB seeding runs asynchronously inside app.prepare() below.
 
